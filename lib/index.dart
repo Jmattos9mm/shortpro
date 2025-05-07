@@ -1,0 +1,49 @@
+// Export pages
+export '/play/choose_play_screen/choose_play_screen_widget.dart'
+    show ChoosePlayScreenWidget;
+export '/play/wedge_pro_challange/wedge_pro_challenge_screen/wedge_pro_challenge_screen_widget.dart'
+    show WedgeProChallengeScreenWidget;
+export '/play/putting_pro_challange/putting_pro_challenge_screen/putting_pro_challenge_screen_widget.dart'
+    show PuttingProChallengeScreenWidget;
+export '/play/single_putting_practice/single_putting_practice_screen/single_putting_practice_screen_widget.dart'
+    show SinglePuttingPracticeScreenWidget;
+export '/autentication/auth1_screen/auth1_screen_widget.dart'
+    show Auth1ScreenWidget;
+export '/stats/stats_screen/stats_screen_widget.dart' show StatsScreenWidget;
+export '/more_settings/settings_screen/settings_screen_widget.dart'
+    show SettingsScreenWidget;
+export '/play/single_wedge_practice/single_wedge_practice_screen/single_wedge_practice_screen_widget.dart'
+    show SingleWedgePracticeScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_01_screen/game_a01_screen_widget.dart'
+    show GameA01ScreenWidget;
+export '/play/single_wedge_practice/game_02_screen/game02_screen_widget.dart'
+    show Game02ScreenWidget;
+export '/play/single_putting_practice/game_03_screen/game03_screen_widget.dart'
+    show Game03ScreenWidget;
+export '/play/putting_pro_challange/game_04_screen/game04_screen_widget.dart'
+    show Game04ScreenWidget;
+export '/history/history_screen/history_screen_widget.dart'
+    show HistoryScreenWidget;
+export '/me/me_screen/me_screen_widget.dart' show MeScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_03_screen/game_a03_screen_widget.dart'
+    show GameA03ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_04_screen/game_a04_screen_widget.dart'
+    show GameA04ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_05_screen/game_a05_screen_widget.dart'
+    show GameA05ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_06_screen/game_a06_screen_widget.dart'
+    show GameA06ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_07_screen/game_a07_screen_widget.dart'
+    show GameA07ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_08_screen/game_a08_screen_widget.dart'
+    show GameA08ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_09_screen/game_a09_screen_widget.dart'
+    show GameA09ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_10_screen/game_a10_screen_widget.dart'
+    show GameA10ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_11_screen/game_a11_screen_widget.dart'
+    show GameA11ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_02_screen/game_a02_screen_widget.dart'
+    show GameA02ScreenWidget;
+export '/play/wedge_pro_challange/play_screen/game_a_12_screen/game_a12_screen_widget.dart'
+    show GameA12ScreenWidget;
