@@ -200,7 +200,7 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                     focusNode: _model.tfOutside30FocusNode,
                                     onChanged: (_) => EasyDebounce.debounce(
                                       '_model.tfOutside30TextController',
-                                      Duration(milliseconds: 2000),
+                                      Duration(milliseconds: 130),
                                       () async {
                                         _model.outside30 =
                                             (String tfOutside30Value) {
@@ -348,10 +348,10 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                       ),
                                       filled: true,
                                       fillColor: Color(0xFFE5E5E1),
+                                      hoverColor: Color(0xFF9E9C9C),
                                     ),
                                     style: GoogleFonts.inter(
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
+                                      color: Color(0xFF7A7B7D),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 17.0,
                                     ),
@@ -363,7 +363,8 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                             maxLength}) =>
                                         null,
                                     keyboardType: TextInputType.number,
-                                    cursorColor: Color(0x01878787),
+                                    cursorColor: FlutterFlowTheme.of(context)
+                                        .secondaryText,
                                     validator: _model
                                         .tfOutside30TextControllerValidator
                                         .asValidator(context),
@@ -405,7 +406,7 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                       focusNode: _model.tf15to30FocusNode,
                                       onChanged: (_) => EasyDebounce.debounce(
                                         '_model.tf15to30TextController',
-                                        Duration(milliseconds: 2000),
+                                        Duration(milliseconds: 130),
                                         () async {
                                           _model.ft15to30 =
                                               (String tf15to30Value) {
@@ -552,10 +553,10 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                         ),
                                         filled: true,
                                         fillColor: Color(0xFFE5E5E1),
+                                        hoverColor: Color(0xFF9E9C9C),
                                       ),
                                       style: GoogleFonts.inter(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
+                                        color: Color(0xFF7A7B7D),
                                         fontWeight: FontWeight.normal,
                                         fontSize: 17.0,
                                       ),
@@ -568,7 +569,7 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                           null,
                                       keyboardType: TextInputType.number,
                                       cursorColor: FlutterFlowTheme.of(context)
-                                          .primaryText,
+                                          .secondaryText,
                                       validator: _model
                                           .tf15to30TextControllerValidator
                                           .asValidator(context),
@@ -611,7 +612,7 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                       focusNode: _model.tf6to15FocusNode,
                                       onChanged: (_) => EasyDebounce.debounce(
                                         '_model.tf6to15TextController',
-                                        Duration(milliseconds: 2000),
+                                        Duration(milliseconds: 130),
                                         () async {
                                           _model.ft6to15 =
                                               (String tf6to15Value) {
@@ -758,10 +759,10 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                         ),
                                         filled: true,
                                         fillColor: Color(0xFFE5E5E1),
+                                        hoverColor: Color(0xFF9E9C9C),
                                       ),
                                       style: GoogleFonts.inter(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
+                                        color: Color(0xFF7A7B7D),
                                         fontWeight: FontWeight.normal,
                                         fontSize: 17.0,
                                       ),
@@ -774,7 +775,7 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                           null,
                                       keyboardType: TextInputType.number,
                                       cursorColor: FlutterFlowTheme.of(context)
-                                          .primaryText,
+                                          .secondaryText,
                                       validator: _model
                                           .tf6to15TextControllerValidator
                                           .asValidator(context),
@@ -818,7 +819,7 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                       focusNode: _model.tfInside6FocusNode,
                                       onChanged: (_) => EasyDebounce.debounce(
                                         '_model.tfInside6TextController',
-                                        Duration(milliseconds: 2000),
+                                        Duration(milliseconds: 130),
                                         () async {
                                           _model.inside6 =
                                               (String tfInside6Value) {
@@ -966,10 +967,10 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                         ),
                                         filled: true,
                                         fillColor: Color(0xFFE5E5E1),
+                                        hoverColor: Color(0xFF9E9C9C),
                                       ),
                                       style: GoogleFonts.inter(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
+                                        color: Color(0xFF7A7B7D),
                                         fontWeight: FontWeight.normal,
                                         fontSize: 17.0,
                                       ),
@@ -982,7 +983,7 @@ class _GameA03ScreenWidgetState extends State<GameA03ScreenWidget> {
                                           null,
                                       keyboardType: TextInputType.number,
                                       cursorColor: FlutterFlowTheme.of(context)
-                                          .primaryText,
+                                          .secondaryText,
                                       validator: _model
                                           .tfInside6TextControllerValidator
                                           .asValidator(context),
