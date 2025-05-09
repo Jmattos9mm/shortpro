@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049893301251",
+    "project_id": "shortpro-2c726",
+    "storage_bucket": "shortpro-2c726.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049893301251:android:7d1d4d929837c9b7a4b236",
+        "android_client_info": {
+          "package_name": "com.mycompany.shortpro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAWwOE0KumF8xyJ8qE9zBEfmgf9JqyYqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
