@@ -61,70 +61,70 @@ class FFAppState extends ChangeNotifier {
 
   List<Drill> _drills = [
     Drill(
-        distance: "90 yds",
+        distance: "90",
         step: "1/11",
         title: "Approach shot",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "70 yds",
+        distance: "70",
         step: "2/11",
         title: "Approach shot",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "50 yds",
+        distance: "50",
         step: "3/11",
         title: "Approach shot",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "30 yds",
+        distance: "30",
         step: "4/11",
         title: "Approach shot",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "90 yds",
+        distance: "90",
         step: "5/11",
         title: "Approach shot",
         subtitle: "bunker",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "20 yds",
+        distance: "20",
         step: "6/11",
         title: "Up-and-down",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "10 yds",
+        distance: "10",
         step: "7/11",
         title: "Up-and-down",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "5 yds",
+        distance: "5",
         step: "8/11",
         title: "Up-and-down",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "30 yds",
+        distance: "30",
         step: "9/11",
         title: "Up-and-down",
         subtitle: "bunker",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "10 yds",
+        distance: "10",
         step: "10/11",
         title: "Up-and-down",
         subtitle: "bunker",
         imageUrl:
             "https://res.cloudinary.com/djn8h8vbi/image/upload/v1746649660/campo_fmc4kj.png"),
     Drill(
-        distance: "10 yds",
+        distance: "10",
         step: "11/11",
         title: "Up-and-down",
         subtitle: "Lob over bunker",
