@@ -1,7 +1,6 @@
 import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -35,7 +34,6 @@ void main() async {
 }
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
 
@@ -48,6 +46,7 @@ class _MyAppState extends State<MyApp> {
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
+
   String getRoute([RouteMatch? routeMatch]) {
     final RouteMatch lastMatch =
         routeMatch ?? _router.routerDelegate.currentConfiguration.last;
@@ -121,7 +120,6 @@ class NavBarPage extends StatefulWidget {
   _NavBarPageState createState() => _NavBarPageState();
 }
 
-/// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
   String _currentPageName = 'ChoosePlay_Screen';
   late Widget? _currentPage;
@@ -148,10 +146,11 @@ class _NavBarPageState extends State<NavBarPage> {
 
     return Scaffold(
       body: MediaQuery(
-          data: queryData
-              .removeViewInsets(removeBottom: true)
-              .removeViewPadding(removeBottom: true),
-          child: _currentPage ?? tabs[_currentPageName]!),
+        data: queryData
+            .removeViewInsets(removeBottom: true)
+            .removeViewPadding(removeBottom: true),
+        child: _currentPage ?? tabs[_currentPageName]!,
+      ),
       extendBody: true,
       bottomNavigationBar: FloatingNavbar(
         currentIndex: currentIndex,
@@ -162,11 +161,11 @@ class _NavBarPageState extends State<NavBarPage> {
         backgroundColor: Color(0xFFF0F0E9),
         selectedItemColor: FlutterFlowTheme.of(context).primary,
         unselectedItemColor: Color(0xFF515151),
-        selectedBackgroundColor: Color(0x00000000),
+        selectedBackgroundColor: Colors.transparent,
         borderRadius: 8.0,
         itemBorderRadius: 8.0,
         margin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
-        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        padding: EdgeInsets.symmetric(vertical: 8.0),
         width: double.infinity,
         elevation: 0.0,
         items: [
@@ -174,23 +173,17 @@ class _NavBarPageState extends State<NavBarPage> {
             customWidget: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.perm_identity,
-                  color: currentIndex == 0
-                      ? FlutterFlowTheme.of(context).primary
-                      : Color(0xFF515151),
-                  size: 30.0,
-                ),
-                Text(
-                  'Me',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                Icon(Icons.perm_identity,
                     color: currentIndex == 0
                         ? FlutterFlowTheme.of(context).primary
                         : Color(0xFF515151),
-                    fontSize: 11.0,
-                  ),
-                ),
+                    size: 30.0),
+                Text('Me',
+                    style: TextStyle(
+                        color: currentIndex == 0
+                            ? FlutterFlowTheme.of(context).primary
+                            : Color(0xFF515151),
+                        fontSize: 11.0)),
               ],
             ),
           ),
@@ -198,23 +191,17 @@ class _NavBarPageState extends State<NavBarPage> {
             customWidget: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.history,
-                  color: currentIndex == 1
-                      ? FlutterFlowTheme.of(context).primary
-                      : Color(0xFF515151),
-                  size: 30.0,
-                ),
-                Text(
-                  'History',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                Icon(Icons.history,
                     color: currentIndex == 1
                         ? FlutterFlowTheme.of(context).primary
                         : Color(0xFF515151),
-                    fontSize: 11.0,
-                  ),
-                ),
+                    size: 30.0),
+                Text('History',
+                    style: TextStyle(
+                        color: currentIndex == 1
+                            ? FlutterFlowTheme.of(context).primary
+                            : Color(0xFF515151),
+                        fontSize: 11.0)),
               ],
             ),
           ),
@@ -222,23 +209,17 @@ class _NavBarPageState extends State<NavBarPage> {
             customWidget: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.home_outlined,
-                  color: currentIndex == 2
-                      ? FlutterFlowTheme.of(context).primary
-                      : Color(0xFF515151),
-                  size: 30.0,
-                ),
-                Text(
-                  'Play',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                Icon(Icons.home_outlined,
                     color: currentIndex == 2
                         ? FlutterFlowTheme.of(context).primary
                         : Color(0xFF515151),
-                    fontSize: 11.0,
-                  ),
-                ),
+                    size: 30.0),
+                Text('Play',
+                    style: TextStyle(
+                        color: currentIndex == 2
+                            ? FlutterFlowTheme.of(context).primary
+                            : Color(0xFF515151),
+                        fontSize: 11.0)),
               ],
             ),
           ),
@@ -246,23 +227,17 @@ class _NavBarPageState extends State<NavBarPage> {
             customWidget: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.bar_chart,
-                  color: currentIndex == 3
-                      ? FlutterFlowTheme.of(context).primary
-                      : Color(0xFF515151),
-                  size: 30.0,
-                ),
-                Text(
-                  'Stats',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                Icon(Icons.bar_chart,
                     color: currentIndex == 3
                         ? FlutterFlowTheme.of(context).primary
                         : Color(0xFF515151),
-                    fontSize: 11.0,
-                  ),
-                ),
+                    size: 30.0),
+                Text('Stats',
+                    style: TextStyle(
+                        color: currentIndex == 3
+                            ? FlutterFlowTheme.of(context).primary
+                            : Color(0xFF515151),
+                        fontSize: 11.0)),
               ],
             ),
           ),
@@ -270,26 +245,20 @@ class _NavBarPageState extends State<NavBarPage> {
             customWidget: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.settings_sharp,
-                  color: currentIndex == 4
-                      ? FlutterFlowTheme.of(context).primary
-                      : Color(0xFF515151),
-                  size: 24.0,
-                ),
-                Text(
-                  'settings',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                Icon(Icons.settings_sharp,
                     color: currentIndex == 4
                         ? FlutterFlowTheme.of(context).primary
                         : Color(0xFF515151),
-                    fontSize: 11.0,
-                  ),
-                ),
+                    size: 24.0),
+                Text('Settings',
+                    style: TextStyle(
+                        color: currentIndex == 4
+                            ? FlutterFlowTheme.of(context).primary
+                            : Color(0xFF515151),
+                        fontSize: 11.0)),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

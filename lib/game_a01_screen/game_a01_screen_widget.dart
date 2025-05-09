@@ -70,7 +70,7 @@ class _GameA01ScreenWidgetState extends State<GameA01ScreenWidget> {
           alignment: AlignmentDirectional(0.0, -1.0),
           child: Container(
             width: double.infinity,
-            height: 758.9,
+            height: double.infinity,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0xFFF0F0E9), Colors.white],
@@ -88,30 +88,36 @@ class _GameA01ScreenWidgetState extends State<GameA01ScreenWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        drill.distance,
-                        style: GoogleFonts.inter(
-                          color: Color(0xFFD06838),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 32.0,
-                        ),
-                      ),
-                      Flexible(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              5.0, 10.0, 0.0, 0.0),
-                          child: Text(
-                            'yds',
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            currentDrill.distance,
                             style: GoogleFonts.inter(
                               color: Color(0xFFD06838),
                               fontWeight: FontWeight.bold,
-                              fontSize: 20.0,
+                              fontSize: 32.0,
                             ),
                           ),
-                        ),
+                          SizedBox(
+                              width:
+                                  4.0), // espaço curto entre número e unidade
+                          Padding(
+                            padding: EdgeInsets.only(
+                                bottom: 4.0), // alinha visualmente com número
+                            child: Text(
+                              'yds',
+                              style: GoogleFonts.inter(
+                                color: Color(0xFFD06838),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20.0,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       Text(
-                        drill.step,
+                        currentDrill.step,
                         style: GoogleFonts.inter(
                           color: Color(0xFFD06838),
                           fontWeight: FontWeight.bold,
