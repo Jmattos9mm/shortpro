@@ -1063,8 +1063,19 @@ class _GameA01ScreenWidgetState extends State<GameA01ScreenWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 18.0, 0.0, 0.0),
                           child: FFButtonWidget(
-                            onPressed: () async {
-                              context.safePop();
+                            onPressed: () {
+                              final appState = Provider.of<FFAppState>(context,
+                                  listen: false);
+
+                              if (appState.currentDrillIndex == 0) {
+                                context.goNamed('ChoosePlay_Screen');
+                              } else {
+                                setState(() {
+                                  appState.currentDrillIndex--;
+                                });
+                                context.pushReplacementNamed(
+                                    GameA01ScreenWidget.routeName);
+                              }
                             },
                             text: 'Back',
                             options: FFButtonOptions(
@@ -1100,19 +1111,13 @@ class _GameA01ScreenWidgetState extends State<GameA01ScreenWidget> {
                             onPressed: () {
                               final appState = Provider.of<FFAppState>(context,
                                   listen: false);
-
                               if (appState.currentDrillIndex <
                                   appState.drills.length - 1) {
-                                setState(() {
-                                  appState.currentDrillIndex++;
-                                });
-
-                                // Reinicia a mesma tela com o próximo drill
+                                setState(() => appState.currentDrillIndex++);
                                 context.pushReplacementNamed(
                                     GameA01ScreenWidget.routeName);
                               } else {
-                                // Se for o último drill, avança para a tela final desejada
-                                context.pushNamed('gameA12_screen');
+                                context.pushReplacementNamed('GameA12_Screen');
                               }
                             },
                             text: 'Next',

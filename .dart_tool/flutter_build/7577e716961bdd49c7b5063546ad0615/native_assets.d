@@ -1,1 +1,0 @@
- /Users/jmattos/FlotterFlow_download/short-game-pro-a86g1s/.dart_tool/flutter_build/7577e716961bdd49c7b5063546ad0615/native_assets.yaml: 

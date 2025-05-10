@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'game_a12_screen_model.dart';
 export 'game_a12_screen_model.dart';
+import '../game_a01_screen/game_a01_screen_widget.dart';
 
 class GameA12ScreenWidget extends StatefulWidget {
   const GameA12ScreenWidget({super.key});
@@ -2870,8 +2871,14 @@ class _GameA12ScreenWidgetState extends State<GameA12ScreenWidget> {
                             child: Align(
                               alignment: AlignmentDirectional(0.0, 1.0),
                               child: FFButtonWidget(
-                                onPressed: () async {
-                                  context.safePop();
+                                onPressed: () {
+                                  final appState = Provider.of<FFAppState>(
+                                      context,
+                                      listen: false);
+                                  appState.currentDrillIndex =
+                                      appState.drills.length - 1;
+                                  context.pushReplacementNamed(
+                                      GameA01ScreenWidget.routeName);
                                 },
                                 text: 'Back',
                                 options: FFButtonOptions(
