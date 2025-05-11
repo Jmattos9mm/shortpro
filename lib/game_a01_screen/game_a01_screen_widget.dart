@@ -1111,12 +1111,34 @@ class _GameA01ScreenWidgetState extends State<GameA01ScreenWidget> {
                             onPressed: () {
                               final appState = Provider.of<FFAppState>(context,
                                   listen: false);
+                              final score = (_model.outside30 * 0) +
+                                  (_model.ft15to30 * 1) +
+                                  (_model.ft6to15 * 3) +
+                                  (_model.inside6 * 5);
+                              FFAppState()
+                                      .drillScores[appState.currentDrillIndex] =
+                                  score;
+                              print(
+                                  "Drill salvo: \${appState.currentDrillIndex} => \$score");
+                              print(
+                                  "Estado atual: \${FFAppState().drillScores}");
+
                               if (appState.currentDrillIndex <
                                   appState.drills.length - 1) {
                                 setState(() => appState.currentDrillIndex++);
                                 context.pushReplacementNamed(
                                     GameA01ScreenWidget.routeName);
                               } else {
+                                final score = (_model.outside30 * 0) +
+                                    (_model.ft15to30 * 1) +
+                                    (_model.ft6to15 * 3) +
+                                    (_model.inside6 * 5);
+                                FFAppState().drillScores[
+                                    appState.currentDrillIndex] = score;
+                                print(
+                                    "Drill salvo: ${appState.currentDrillIndex} => $score");
+                                print(
+                                    "Estado atual: ${FFAppState().drillScores}");
                                 context.pushReplacementNamed('GameA12_Screen');
                               }
                             },
